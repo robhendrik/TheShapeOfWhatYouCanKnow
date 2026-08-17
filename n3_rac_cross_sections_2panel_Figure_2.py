@@ -468,7 +468,7 @@ def draw_panel(ax, letter, raw_normal, raw_offset):
     )
 
     # Small line listing the actual oriented basis.
-    basis_text = "In plane directions: " + "   ·   ".join(format_direction(v) for v in axis_vectors)
+    basis_text = "In-plane directions: " + "   ·   ".join(format_direction(v) for v in axis_vectors)
     ax.text(
         0.5, -0.02,
         basis_text,

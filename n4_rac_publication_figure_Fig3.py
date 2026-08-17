@@ -509,9 +509,7 @@ def compose_figure(poly_image, axis_image, axes, normal, offset):
     normal_text = "(" + ", ".join(f"{x:g}" for x in SLICE_NORMAL) + ")"
     fig.text(
         SUBTITLE_POSITION[0], SUBTITLE_POSITION[1],
-        rf"A 3D cut through the 4D classical advantage-space polytope, "
-        rf"normal = {normal_text}, ",
-        #rf"offset = {SLICE_OFFSET:g}   ({slice_label(normal, offset)})",
+        rf"A 3D cut through the 4D classical advantage-space polytope: c₁ = 0",
         ha="left", va="top", fontsize=16.5,
     )
 
