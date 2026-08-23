@@ -1,11 +1,11 @@
 """
-Figures 6 and 7 — balanced deterministic encodings for n=4 and n=6
+Figures 5 and 6 — balanced deterministic encodings for n=4 and n=6
 ===================================================================
 
 Pure Matplotlib script. It creates:
 
-    Figure_6.png   n=4 flow
-    Figure_7.png   n=6 flow
+    Figure_5.png   n=4 flow
+    Figure_6.png   n=6 flow
 
 The layout follows the supplied flow-diagram concept:
 
@@ -58,8 +58,8 @@ from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 # ============================================================================
 
 HERE = Path(__file__).resolve().parent
-OUTPUT_4 = HERE / "Figure_6.png"
-OUTPUT_6 = HERE / "Figure_7.png"
+OUTPUT_4 = HERE / "Figure_5.png"
+OUTPUT_6 = HERE / "Figure_6.png"
 
 DPI = 200
 FIGSIZE = (15.36, 10.24)
@@ -445,7 +445,7 @@ def draw_compression_chain(ax, n, d):
     )
     ax.text(
         0.50, 0.205,
-        "Points grouped under\ncoordinate permutations",
+        "Points can be grouped\n under coordinate\n permutations",
         transform=ax.transAxes,
         ha="center", va="center",
         fontsize=10.6,
@@ -563,10 +563,10 @@ def draw_big_picture(ax, n, d):
         line1 = (
             rf"Out of $\sim 1.83\times10^{{18}}$ balanced encodings, "
             f"only {d['dominators']} are dominators and "
-            f"{fmt_int(d['majority_optimal'])} achieve majority-optimal performance."
+            f"{fmt_int(d['majority_optimal'])} achieve majority-optimal"
         )
         line2 = (
-            f"Geometry and symmetry collapse those optimal encodings to "
+            f"performance. Geometry and symmetry collapse those optimal encodings to "
             f"{d['vertex_types']} vertex types."
         )
 
@@ -588,10 +588,10 @@ def draw_big_picture(ax, n, d):
         color=BLACK,
     )
     ax.text(
-        0.49, 0.048,
+        0.23, 0.048,
         line2,
         transform=ax.transAxes,
-        ha="center", va="center",
+        ha="left", va="center",
         fontsize=BOTTOM_TEXT_SIZE,
         color=BLACK,
     )
@@ -611,7 +611,7 @@ def draw_flow(n, output):
     # Title
     ax.text(
         0.1, 0.965,
-        rf"$n={n}$: From All Balanced Encodings to the Key Families",
+        rf"$n={n}$: From All Balanced Encodings to Vertex Types",
         transform=ax.transAxes,
         ha="left", va="top",
         fontsize=TITLE_SIZE,

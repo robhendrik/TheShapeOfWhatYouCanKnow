@@ -15,7 +15,7 @@ from scipy.spatial import ConvexHull
 
 BASE_SCRIPT = Path(__file__).with_name("n4_rac_cross_section_axis_inset_planar_edges.py")
 OUTPUT = Path(__file__).with_name("Figure_4.png")
-QUANTUM_OUTPUT = Path(__file__).with_name("Figure_5.png")
+QUANTUM_OUTPUT = Path(__file__).with_name("Figure_7.png")
 
 # Four slices to compare. Change these freely.
 SLICES = [
