@@ -4,7 +4,9 @@
 
 ## (Q)SeaBattle Revisited
 <!-- key Goal: In the minimum possible space, make the game understandable to a new reader and remind returning readers of the setup. End by introducing the advantage coordinates cᵢ = 2Pᵢ − 1 and asking what all possible strategies look like when plotted in these coordinates.-->
-Alice and Bob are playing a peculiar version of SeaBattle. Alice sees a board containing *n* bits, while Bob is asked about one randomly chosen position. His job is simple: guess whether the bit at that position is 0 or 1. There is just one catch: Alice may send Bob one bit, and Bob does not get to tell her which position he will be asked about.
+Alice and Bob are playing a peculiar version of SeaBattle. It is a simple guessing game with a surprisingly complicated answer. As we increase the number of bits, the space of classical strategies develops more and more vertices, faces and symmetries. We might expect that adding quantum mechanics would make this geometry even more complicated. Instead, almost all of that complexity disappears.
+
+Alice sees a board containing n bits, while Bob is asked about one randomly chosen position. His job is simple: guess whether the bit at that position is 0 or 1. There is just one catch: Alice may send Bob one bit, and Bob does not get to tell her which position he will be asked about.
 
 For n = 2, Alice might see a board with two bits. What should she send? If she sends the first bit, Bob can answer perfectly when asked about position 1, but learns nothing useful about position 2. Sending the second bit merely reverses the problem. Classically, Alice and Bob have to decide where to place their advantage.
 
@@ -81,7 +83,7 @@ For odd *n*, the optimal classical strategies have a clean structure, and their 
 
 For an ambitious undergraduate mathematics student, this could make a beautiful problem: part combinatorics, part convex geometry, and easy to explore computationally for small *n*. Find the right general pattern and prove it, and there may even be the seed of a paper here.
 
-> ** This could make a beautiful problem: part combinatorics, part convex geometry. Find the right general pattern and prove it, and there may even be the seed of a paper here.**
+> **This could make a beautiful problem: part combinatorics, part convex geometry. Find the right general pattern and prove it, and there may even be the seed of a paper here.**
 
 ## And Then We Add Quantum Mechanics
 <!-- Key goal: Deliver the reversal promised by the title. We expect quantum resources to add another layer of complexity. Instead, the complicated classical geometry becomes a hypersphere. End by asking why nature chooses this remarkably simple boundary — and what might lie beyond it. -->
@@ -98,7 +100,7 @@ $c₁$² + $c₂$² + ⋯ + $cₙ$² = 1,
 
 So the point $cᵢ$ = 1/√$n$ is just one special point on a much larger object: the point where the diagonal $c₁$ = $c₂$ = ⋯ = $cₙ$ meets the sphere. Move away from that diagonal and Alice and Bob can gain advantage on one question at the expense of another, while remaining on the same smooth boundary. We added quantum mechanics — and the geometry became simpler, not more complicated.
 
-> ** We added quantum mechanics — and the geometry became simpler, not more complicated.**
+> **We added quantum mechanics — and the geometry became simpler, not more complicated.**
 
 There is something almost suspiciously neat about this. An enormous collection of classical strategies produces a many-faced polytope whose structure rapidly becomes difficult to classify, while the quantum resource replaces it with one of the simplest and most symmetric objects in geometry. The complexity has not merely been reduced; much of its combinatorial character has disappeared.
 
