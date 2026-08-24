@@ -115,3 +115,6 @@ That is where we will go next.
 2. A. Ambainis, S. Kravchenko, S. Sazim, J. Bae, and A. Rai, “Quantum Advantages in (n,d)→1 Random Access Codes,” 2024.
 
 3. M. Pawłowski and M. Żukowski, “Entanglement Assisted Random Access Codes,” *Physical Review A* **81**, 042326 (2010).
+
+![QSeaBattleBanner](QSeaBattleBanner.png)
+> *[QSeaBattle is on Github](https://robhendrik.github.io/QSeaBattle/)*
