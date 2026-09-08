@@ -8,9 +8,9 @@ Suggested image: Figure 4-style classical cross-sections on the left, transformi
 Caption: The same guessing game produces an increasingly complicated classical geometry. Add the quantum resource, and the different shapes collapse into the same sphere.
 -->
 
-Alice and Bob are playing an almost trivial guessing game. Alice sees a board of bits, Bob is asked about one randomly chosen position, and Alice may send him only a single bit before she knows which position he will be asked about.
+Alice and Bob are playing an almost trivial guessing game. Alice sees a board of bits, Bob has to guess the value at one randomly chosen position, and Alice may send him only a single bit before she knows which position he will be asked about.
 
-Yet when we try to describe **all** the strategies they can use, something unexpected happens. With three possible questions the classical strategies already form a many-faced polytope. With four, the object lives in four dimensions and different slices through it produce strikingly different shapes. At six, merely resolving the tied inputs gives Alice **184,756 equally optimal deterministic strategies**.
+Yet when we try to describe **all** the strategies they can use, something unexpected happens. The optimal classical strategies form a many-faced polytope. For a board with 4 cells the strategy polytope lives in four dimensions and different slices through it produce strikingly different shapes. For 6 cells merely resolving the tied inputs gives Alice **184,756 equally optimal deterministic strategies**.
 
 So what happens when we add quantum mechanics?
 
@@ -30,11 +30,11 @@ For *n* = 2, Alice might simply send the first bit. Bob then answers perfectly w
 
 Classically, Alice and Bob therefore have to decide **where to place their advantage**.
 
-We can measure that advantage separately for every possible question. Let *Pᵢ* be Bob's probability of answering correctly when asked for bit *i*, and define
+We can measure that advantage separately for every possible question. Let *Pᵢ* be Bob's probability of answering correctly when asked for bit *i*.
 
 *cᵢ* = 2*Pᵢ* − 1.
 
-So *cᵢ* = 0 means Bob is doing no better than a coin toss, while *cᵢ* = 1 means he always gets bit *i* right. A negative value simply means his answer is biased in the wrong direction.
+So *cᵢ* = 0 means Bob is doing no better than a coin toss, while *cᵢ* = 1 means he always gets bit *i* right. A negative value simply means his answer is biased in the wrong direction. We call *c* the **advantage**.
 
 Instead of describing everything Alice and Bob do, we can now represent a strategy by a single point
 
@@ -154,11 +154,7 @@ Then try *n* = 6.
 
 There are now 64 possible input strings, 20 of which are tied. The number of balanced deterministic encodings exceeds **1.8 × 10¹⁸**.
 
-Even if we ignore almost all of those and look only at the ways of resolving the tied inputs while retaining the majority strategy elsewhere, we still have
-
-**184,756**
-
-majority-optimal deterministic tie partitions.
+Even if we ignore almost all of those and look only at the ways of resolving the tied inputs while retaining the majority strategy elsewhere, we still have **184,756** majority-optimal deterministic tie partitions.
 
 After mapping them into advantage space and exploiting symmetry, this enormous collection reduces to 4,733 distinct labelled points, 41 permutation classes, and finally six vertex types.
 
@@ -168,19 +164,15 @@ After mapping them into advantage space and exploiting symmetry, this enormous c
 >
 > Alt text: A flow diagram for n = 6 showing the reduction from more than 1.8 × 10¹⁸ balanced deterministic encodings through 184,756 majority-optimal tie partitions, 4,733 advantage-space points and 41 symmetry classes to six vertex types.
 
-So there is order inside the explosion. Symmetry compresses hundreds of thousands of optimal strategies into a relatively small catalogue.
-
-But we still had to find the catalogue.
+So there is order inside the explosion. Symmetry compresses hundreds of thousands of optimal strategies into a relatively small catalogue, but we still have to find the catalogue.
 
 And for larger even *n*, the combinatorics rapidly become worse.
 
 This triggers an interesting mathematical question in its own right: **is there a general way to classify the optimal points and vertices for even *n*?**
 
-The ingredients are quite elementary — binary strings, subsets, permutations and convex hulls — but the resulting geometry is not. For a mathematically inclined student this might even make an interesting research problem.
+The ingredients are quite elementary — binary strings, subsets, permutations and convex hulls — but the resulting geometry is not. For a mathematically inclined student this might even make an interesting research problem (which I have not yet seen in a publication).
 
-But now let us return to the question we started with.
-
-What happens when we add quantum mechanics?
+But now let us return to the question we started with: What happens when we add quantum mechanics?
 
 ## And Then We Add Quantum Mechanics
 
@@ -218,11 +210,15 @@ and therefore
 
 *c₁*² + *c₂*² = 1.
 
-So instead of moving along a straight classical edge, the advantage vector rotates around a circle.
+So instead of moving along a straight classical edge, the advantage vector rotates around a circle. For three questions, the same idea becomes an ordinary sphere.
 
-For three questions, the same idea becomes an ordinary sphere.
+How do we get past three? We don’t invent a new resource for each *n* — we reuse the same one, recursively.
 
-And for the binary quantum construction used here, the pattern continues into higher dimensions. The individual advantages may trade against one another, but their Euclidean length remains fixed:
+Split the *n* questions into two halves. A first quantum coin — exactly the two-outcome primitive from *n* = 2 — decides how much of the total advantage budget goes to each half: cos²φ to one half, sin²φ to the other. Whatever budget a half receives, it then splits again between its own two halves, using another coin, and so on, until every individual question is left holding its own sliver of the total.
+
+Because each split obeys cos²φ + sin²φ = 1, nothing leaks out along the way — the two children of any split always add back up to their parent’s share. Chase that all the way down the tree and the *n* individual advantages *cᵢ* all out as the leaves of this construction: a set of angles that mathematicians call hyperspherical coordinates. This only closes up neatly when *n* is a power of two, which is why the construction is built by doubling — *n* = 2, 4, 8, …
+
+So, for this binary pyramid construction used here, the pattern continues into higher dimensions. The individual advantages may trade against one another, but their Euclidean length remains fixed:
 
 *c₁*² + *c₂*² + ⋯ + *cₙ*² = 1.
 
@@ -232,17 +228,13 @@ The symmetric strategy lies where the diagonal
 
 *c₁* = *c₂* = ⋯ = *cₙ*
 
-meets this sphere.
-
-There,
+meets this sphere. There,
 
 *cᵢ* = 1/√*n*.
 
 But that familiar symmetric point is only one point on a much larger object. Alice and Bob can gain advantage on one question at the expense of another and move continuously across the spherical boundary.
 
-Classically, those trade-offs generate flat faces.
-
-Quantum mechanically, they become rotations.
+Classically, those trade-offs generate flat faces. Quantum mechanically, they become rotations.
 
 ## From Thousands of Rules to One Equation
 
@@ -286,7 +278,7 @@ The sphere would no longer be the outer boundary.
 
 It would sit inside something larger.
 
-And that triggers the question for the next post:
+And that triggers the question for a next post:
 
 **What would a world beyond the quantum sphere look like — and what would go wrong if nature allowed us to live there?**
 
