@@ -2,11 +2,7 @@
 
 *A guessing game becomes geometrically more and more complicated — until we add quantum mechanics.*
 
-<!-- FEATURE IMAGE — NEW
-Suggested image: Figure 4-style classical cross-sections on the left, transforming into the Figure 7 quantum spheres on the right. Keep labels minimal: CLASSICAL → QUANTUM.
-
-Caption: The same guessing game produces an increasingly complicated classical geometry. Add the quantum resource, and the different shapes collapse into the same sphere.
--->
+![Feature_image.png](Feature_image.png)
 
 Alice and Bob are playing an almost trivial guessing game. Alice sees a board of bits, Bob has to guess the value at one randomly chosen position, and Alice may send him only a single bit before she knows which position he will be asked about.
 
