@@ -19,4 +19,4 @@ This work builds on the SeaBattle game from the earlier article [The Best Bit Al
 
 ## Author
 
-Rob Hendriks, writing about quantum optics and the physics hiding in everyday things at [The Armchair Quantum Physicist](https://armchairquantumphysicist.com/).
+Rob, writing about quantum optics and the physics hiding in everyday things at [The Armchair Quantum Physicist](https://armchairquantumphysicist.com/).
